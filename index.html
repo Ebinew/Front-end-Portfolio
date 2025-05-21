@@ -1,36 +1,94 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- External CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
     <!-- Header -->
     <header>
-        <div class="container">
+        <div class="container header-container">
+            <a href="#home" class="logo">Portfolio<span>.</span></a>
             <nav>
-                <div class="logo">Portfolio</div>
-                <ul class="nav-links">
-                    <li><a href="#hero">Home</a></li>
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <div class="menu-toggle" id="menuToggle">☰</div>
-                <button class="theme-toggle" id="themeToggle">🌙</button>
             </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="mobile-menu-btn" aria-label="Toggle Mobile Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="hero">
-        <div class="container">
-            <div class="hero-content">
+    <section id="home">
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+        <div class="wave-background">
+            <svg class="wave" viewBox="0 0 1440 320" preserveAspectRatio="none">
+                <path fill="var(--primary-color)" fill-opacity="0.2">
+                    <animate
+                        attributeName="d"
+                        values="
+                            M0,160L48,176C96,192,192,224,288,213.3C384,203,480,149,576,128C672,107,768,117,864,138.7C960,160,1056,192,1152,197.3C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z;
+                            M0,160L48,144C96,128,192,96,288,106.7C384,117,480,171,576,192C672,213,768,203,864,181.3C960,160,1056,128,1152,122.7C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z;
+                            M0,160L48,176C96,192,192,224,288,213.3C384,203,480,149,576,128C672,107,768,117,864,138.7C960,160,1056,192,1152,197.3C1248,203,1344,181,1392,170.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+                        dur="6s"
+                        repeatCount="indefinite"
+                    />
+                </path>
+                <path fill="var(--secondary-color)" fill-opacity="0.3">
+                    <animate
+                        attributeName="d"
+                        values="
+                            M0,224L48,213.3C96,203,192,181,288,170.7C384,160,480,160,576,181.3C672,203,768,245,864,245.3C960,245,1056,203,1152,181.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z;
+                            M0,224L48,234.7C96,245,192,267,288,277.3C384,288,480,288,576,266.7C672,245,768,203,864,202.7C960,203,1056,245,1152,266.7C1248,288,1344,288,1392,288L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z;
+                            M0,224L48,213.3C96,203,192,181,288,170.7C384,160,480,160,576,181.3C672,203,768,245,864,245.3C960,245,1056,203,1152,181.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+                        dur="6s"
+                        repeatCount="indefinite"
+                    />
+                </path>
+            </svg>
+        </div>
+        <div class="container hero-container">
+            <div class="hero-text">
                 <h1>Hi, I'm Abhinav Tiwari</h1>
                 <p>Aspiring Web Developer passionate about learning and building user-friendly websites.</p>
-                <a href="#projects" class="btn">View My Work</a>
+                <div class="cta-buttons">
+                    <a href="#portfolio" class="btn btn-outline">View My Work</a>
+                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/Ebinew" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/abhinav-tiwari-8ba31a287/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
             </div>
         </div>
     </section>
@@ -38,97 +96,76 @@
     <!-- About Section -->
     <section id="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <div class="section-title">
+                <h2>About Me</h2>
+                <p>Get to know me better and discover my professional journey and skills.</p>
+            </div>
             <div class="about-content">
-                <div style="display: flex; align-items: center; gap: 20px;">
-    <img src="./images/file_000000001ce061f88810ab2169c0228f.png" alt="Profile Photo"
-         style="width: 100%; max-width: 350px; aspect-ratio: 1/1; border-radius: 50%; object-fit: cover;">
-    
-    <div>
-        <h3>Who am I?</h3>
-        <p>I'm a beginner web developer who recently started exploring the world of web development. I enjoy turning ideas into websites and learning how to make things look and work great on the web.
-
-I started learning HTML, CSS, and JavaScript through online courses and small personal projects. This is my first portfolio website, and I'm excited to keep improving my skills.</p>
-    </div>
-</div>
-
+                <div class="about-image">
+                    <img src="./images/file_000000001ce061f88810ab2169c0228f.png" alt="Profile Picture">
+                </div>
+                <div class="about-text">
+                    <h3>Who am I?</h3>
+                    <p>I'm a beginner web developer who recently started exploring the world of web development. I enjoy turning ideas into websites and learning how to make things look and work great on the web.</p>
+                    <p>I started learning HTML, CSS, and JavaScript through online courses and small personal projects. This is my first portfolio website, and I'm excited to keep improving my skills.</p>
                     <div class="skills">
-                        <span class="skill-tag">HTML5</span>
-                        <span class="skill-tag">CSS3</span>
-                        <span class="skill-tag">JavaScript</span>
-                       
-                        <span class="skill-tag">Node.js</span>
-                        
-                        <span class="skill-tag">Responsive Design</span>
-                        
+                        <span class="skill">HTML5</span>
+                        <span class="skill">CSS3</span>
+                        <span class="skill">JavaScript</span>
+                        <span class="skill">Node.js</span>
+                        <span class="skill">Responsive Design</span>
+                    </div>
+                    <div class="cta-buttons" style="margin-top: 2rem;">
+                        <a href="#" class="btn">Download CV</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Projects Section -->
-    <section id="projects">
+    <section id="portfolio">
         <div class="container">
-            <h2 class="section-title">My Projects</h2>
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="./images/Screenshot 2025-05-21 005355.png " alt="Project 1">
-                    </div>
-                    <div class="project-info">
-                        <h3>Personal Portfolio Website</h3>
-                        <p>A clean and responsive personal website built from scratch using HTML and CSS only.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                            
-                           
-                        </div>
-                        <div class="project-links">
-                            <a href="https://ebinew.github.io/Capstone-project-2/" target="_blank">Live Demo</a>
-                            <a href="https://github.com/Ebinew/Capstone-project-2" target="_blank">Source Code</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="./images/Screenshot 2025-05-21 013733.png" alt="Project 2">
-                    </div>
-                    <div class="project-info">
-                        <h3>BMI Calculator</h3>
-                        <p>A basic BMI calculator that performs arithmetic operations using JavaScript.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                            <span class="project-tag">JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://ebinew.github.io/BMI-Calculator/" target="_blank">Live Demo</a>
-                            <a href="https://github.com/Ebinew/BMI-Calculator" target="_blank">Source Code</a>
+            <div class="section-title">
+                <h2>My Projects</h2>
+                <p>Take a look at some of my recent projects...</p>
+            </div>
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">JavaScript</button>
+                <button class="filter-btn" data-filter="design">Html</button>
+                <button class="filter-btn" data-filter="app">CSS3</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="design">
+                    <img src="./images/Screenshot 2025-05-21 005355.png " alt="Project 1" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Personal Portfolio Website</h3>
+                        <p class="portfolio-category">Html, CSS3</p>
+                        <div class="portfolio-links">
+                            <a href="https://ebinew.github.io/Capstone-project-2/" class="portfolio-link" aria-label="View Details"><i class="fas fa-link"></i></a>
+                            <a href="https://github.com/Ebinew/Capstone-project-2" class="portfolio-link" aria-label="View Code"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Project 3 -->
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="./images/Screenshot 2025-05-21 014000.png" alt="Project 3">
-                    </div>
-                    <div class="project-info">
-                        <h3>Color Scheme Switcher</h3>
-                        <p>A simple and interactive background color switcher built using HTML, CSS, and JavaScript. Users can click on different color buttons to instantly change the background color of the page. This project demonstrates basic DOM manipulation and event handling in JavaScript.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">HTML</span>
-                            <span class="project-tag">CSS</span>
-                            <span class="project-tag">JavaScript</span>
+                <div class="portfolio-item" data-category="design web app">
+                    <img src="./images/Screenshot 2025-05-21 013733.png" alt="Project 2" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">BMI Calculator</h3>
+                        <p class="portfolio-category">Html, CSS, JavaScript</p>
+                        <div class="portfolio-links">
+                            <a href="https://ebinew.github.io/BMI-Calculator/" class="portfolio-link" aria-label="View Details"><i class="fas fa-link"></i></a>
+                            <a href="https://github.com/Ebinew/BMI-Calculator" class="portfolio-link" aria-label="View Code"><i class="fab fa-github"></i></a>
                         </div>
-                        <div class="project-links">
-                            <a href="https://ebinew.github.io/Background-color/" target="_blank">Live Demo</a>
-                            <a href="https://github.com/Ebinew/Background-color" target="_blank">Source Code</a>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="web">
+                    <img src="./images/Screenshot 2025-05-21 014000.png" alt="Project 3" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Color Scheme Switcher</h3>
+                        <p class="portfolio-category">JavaScript</p>
+                        <div class="portfolio-links">
+                            <a href="https://ebinew.github.io/Background-color/" class="portfolio-link" aria-label="View Details"><i class="fas fa-link"></i></a>
+                            <a href="https://github.com/Ebinew/Background-color" class="portfolio-link" aria-label="View Code"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
                 </div>
@@ -139,45 +176,77 @@ I started learning HTML, CSS, and JavaScript through online courses and small pe
     <!-- Contact Section -->
     <section id="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
+            <div class="section-title">
+                <h2>Contact Me</h2>
+                <p>Get in touch with me for collaborations, projects, or just to say hello!</p>
+            </div>
             <div class="contact-container">
                 <div class="contact-info">
-                    <h3>Let's Talk</h3>
+                    <h3>Let's Get In Touch</h3>
                     <p>I'm currently looking for opportunities to learn and grow as a web developer. If you have feedback, collaboration ideas, or just want to say hi, feel free to contact me!</p>
-                    <div class="contact-links">
-                        <div class="contact-link">
-                            <i>📧</i>
-                            <span>abt23j2004@gmail.com</span>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Location</h4>
+                                <p>New Delhi, India</p>
+                            </div>
                         </div>
-                        <div class="contact-link">
-                            <i>📱</i>
-                            <span>+91-9310107901</span>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>abt2Xj20XX@gmail.com</p>
+                            </div>
                         </div>
-                        <div class="contact-link">
-                            <i>📍</i>
-                            <span>New Delhi, India</span>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <p>+91 98765 43210</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-share-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Social Media</h4>
+                                <div class="social-links">
+                                    <a href="https://github.com/Ebinew" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                    <a href="https://www.linkedin.com/in/abhinav-tiwari-8ba31a287/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="contact-form">
                     <form id="contactForm">
                         <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" id="name" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
+                            <label for="email" class="form-label">Your Email</label>
+                            <input type="email" id="email" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required>
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" id="subject" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" required></textarea>
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea id="message" class="form-control" required></textarea>
                         </div>
-                        <button type="submit" class="submit-btn">Send Message</button>
+                        <button type="submit" class="btn submit-btn">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -187,17 +256,48 @@ I started learning HTML, CSS, and JavaScript through online courses and small pe
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="social-links">
-                <a href="https://github.com/Ebinew" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/abhinav-tiwari-8ba31a287/" target="_blank">LinkedIn</a>
-                <a href="#" target="_blank">Twitter</a>
-                <a href="#" target="_blank">Instagram</a>
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h4>Abhinav</h4>
+                    <p>Aspiring Web Developer passionate about learning and building user-friendly websites.</p>
+                    <div class="footer-social">
+                        <a href="https://github.com/Ebinew" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/abhinav-tiwari-8ba31a287/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#portfolio">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+    
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to receive updates and news.</p>
+                    <form class="footer-form">
+                        <input type="email" placeholder="Your Email" class="form-control">
+                        <button type="submit" class="btn" style="margin-top: 10px;">Subscribe</button>
+                    </form>
+                </div>
             </div>
-            <p class="footer-text">© 2025 Abhinav Tiwari. Built with ❤️ as my first portfolio project.</p>
+            <div class="footer-bottom">
+                <p>© 2025 Abhinav Tiwari. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- Back to top button -->
+    <a href="#" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- External JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
